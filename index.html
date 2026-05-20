@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png"
+        href="https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779292908/CafeHogar-removebg-preview_r34q1g.png">
 </head>
 
 <body class="bg-[#FFF3E6]">
@@ -25,7 +27,9 @@
                             alt="cafe_hogar_logo" class="h-20">
                     </a>
                 </li>
-                <li>Productos</li>
+                <li>
+                    <a href="#best_sellers_sections">Productos</a>
+                </li>
                 <li>Proveedores</li>
                 <li>Clientes</li>
             </ul>
@@ -34,7 +38,7 @@
     <main>
         <section class="mt-10 px-8" id="hero_section">
             <div class="relative w-full h-[600px] rounded-3xl overflow-hidden">
-                <img src="https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779124057/banner_yvbjzm.webp"
+                <img src="https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779222856/new_banner_kwpfwc.jpg"
                     alt="hero_banner" class="w-full h-full object-cover">
                 <div class="absolute inset-0 flex flex-col items-start justify-center text-white pl-16">
                     <h1 class="text-9xl font-bold leading-none" style="font-family: 'Inria Serif', serif;">Café
@@ -45,9 +49,16 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="mt-40 mb-40 px-8 scroll-mt-40" id="best_sellers_sections">
             <div>
-                <h2></h2>
+                <h2 class="justify-center text-6xl items-center text-center text-[#7B5940]"
+                    style="font-family: 'Inria Serif', serif;">
+                    Productos destacados</h2>
+                <div id="products-container" class="mt-10 flex justify-center gap-4">
+                </div>
+                <a href="#" class="block text-right mt-6 text-2xl text-[#7B5940]"
+                    style="font-family: 'Inria Serif', serif;">Ver
+                    mas...</a>
             </div>
         </section>
         <section></section>
@@ -57,6 +68,7 @@
     <footer>
 
     </footer>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
