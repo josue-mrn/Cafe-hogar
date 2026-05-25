@@ -67,9 +67,6 @@ function renderProducts() {
                         <h3 class="font-title text-xl font-bold text-cafecito-dark group-hover:text-cafecito-medium transition-colors">
                             ${product.title}
                         </h3>
-                        <p class="text-xs text-cafecito-dark/70 leading-relaxed line-clamp-3">
-                            ${product.desc}
-                        </p>
                     </div>
                     <button onclick="openProductModal(${product.id})" class="w-full py-2.5 bg-cafecito-cream hover:bg-cafecito-medium hover:text-white text-cafecito-medium font-bold text-xs uppercase tracking-wider rounded-xl transition-all duration-300 border border-cafecito-medium/10 flex items-center justify-center gap-1.5">
                         <span>Ver detalles</span>
