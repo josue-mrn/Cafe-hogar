@@ -61,12 +61,32 @@
         .font-title {
             font-family: 'Inria Serif', serif;
         }
+
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee-custom {
+            display: flex;
+            width: max-content;
+            animation: marquee 20s linear infinite;
+        }
+        .animate-marquee-custom:hover {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 
 <body class="bg-[#FFF3E6]">
     <header class="sticky top-0 z-50">
-        <p class="text-center bg-[#FCFBFA]">Jeancarlo Josue Marroquín Martínez 0900-26-5846</p>
+        <div class="relative w-full overflow-hidden bg-[#FCFBFA] py-2 text-sm font-semibold select-none border-b border-gray-200">
+            <div class="animate-marquee-custom">
+                <!-- Mitad 1 -->
+                <span class="pl-[100vw] text-gray-800 whitespace-nowrap flex-shrink-0">Jeancarlo Josue Marroquín Martínez 0900-26-5846</span>
+                <!-- Mitad 2 (idéntica para loop perfecto) -->
+                <span class="pl-[100vw] text-gray-800 whitespace-nowrap flex-shrink-0 pr-8">Jeancarlo Josue Marroquín Martínez 0900-26-5846</span>
+            </div>
+        </div>
         <nav class="bg-[#FCFBFA]">
             <ul class="list-none flex p-4 items-center justify-center gap-[100px]">
                 <li><a>Quienes somos</a></li>
