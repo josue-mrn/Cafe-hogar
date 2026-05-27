@@ -32,4 +32,45 @@ document.addEventListener('DOMContentLoaded', () => {
             closeIcon.classList.add('hidden');
         });
     });
+
+    // =============================================
+    // Intersection Observer para Animaciones de Scroll
+    // =============================================
+    const scrollObserverOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, scrollObserverOptions);
+
+    // Función para observar elementos
+    const observeElements = () => {
+        const animatedElements = document.querySelectorAll('.animate-on-scroll:not(.observed)');
+        animatedElements.forEach(el => {
+            el.classList.add('observed');
+            scrollObserver.observe(el);
+        });
+    };
+
+    // Observar elementos iniciales
+    observeElements();
+
+    // MutationObserver para observar elementos añadidos dinámicamente
+    const mutationObserver = new MutationObserver(() => {
+        observeElements();
+    });
+
+    mutationObserver.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
 });

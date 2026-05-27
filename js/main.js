@@ -50,7 +50,7 @@ function renderProducts() {
 
     products.forEach(product => {
         productsContainer.innerHTML += `
-            <article class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 border border-cafecito-medium/10 flex flex-col group h-full">
+            <article class="animate-on-scroll opacity-0 translate-y-10 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-700 border border-cafecito-medium/10 flex flex-col group h-full">
                 <!-- Imagen -->
                 <div class="relative overflow-hidden aspect-[4/3] bg-cafecito-cream">
                     <img src="${product.image}" alt="${product.title}" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
