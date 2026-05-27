@@ -2,25 +2,25 @@ const customers = [
     {
         name: 'Carlos Xitumul',
         opinion: '¡Mucha, qué buen café! Me encantó el lugar, súper acogedor. Vine a trabajar un rato con mi compu y se sentía una paz chilera. Además, el café huele espectacular, súper recomendado.',
-        image: 'https://ui-avatars.com/api/?name=Carlos+Xitumul&background=d4af37&color=fff',
+        image: 'https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779122497/samples/man-portrait.jpg',
         stars: 5
     },
     {
         name: 'María Fernanda Monterroso',
         opinion: 'Vine el domingo por la tarde con mis hijos y nos trataron de maravilla. El café tiene un tueste perfecto. Se siente como estar en la sala de tu casa, el servicio te hace sentir especial.',
-        image: 'https://ui-avatars.com/api/?name=Maria+Monterroso&background=6f4e37&color=fff',
+        image: 'https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779122502/main-sample.png',
         stars: 5
     },
     {
         name: 'Juan Pablo Morales',
         opinion: 'Me fascina el concepto. Probé el Café San Marcos y tenía unas notas de sabor que me dejaron con ganas de llevarme dos bolsas. La señorita que nos atendió fue súper amable y atenta. 10/10.',
-        image: 'https://ui-avatars.com/api/?name=Juan+Morales&background=2b170c&color=fff',
+        image: 'https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779122497/samples/man-on-a-street.jpg',
         stars: 5
     },
     {
         name: 'Ana Lucía Samayoa',
         opinion: 'Un rincón súper bonito para despejarse. Fui con mis amigas y la pasamos súper bien. El ambiente es relajado, la música está a buen volumen y el café es de otro nivel. Vamos a regresar fijo.',
-        image: 'https://ui-avatars.com/api/?name=Ana+Samayoa&background=a87c5c&color=fff',
+        image: 'https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779122496/samples/outdoor-woman.jpg',
         stars: 4
     },
     {
@@ -38,7 +38,7 @@ const customers = [
     {
         name: 'Luis Pedro Orellana',
         opinion: 'Fui con mi novia a tomar algo tranquilo y nos encantó la vibra del lugar. Te relajás al instante. Me tomé un espresso y el sabor era puro, sin quemar, como debe ser. ¡Excelente atención muchá!',
-        image: 'https://ui-avatars.com/api/?name=Luis+Orellana&background=2b170c&color=fff',
+        image: 'https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779122494/samples/smile.jpg',
         stars: 5
     },
     {
@@ -50,7 +50,7 @@ const customers = [
     {
         name: 'Carmen Batres',
         opinion: 'Una joyita de cafetería. Es el lugar perfecto para echarse un buen chisme o simplemente para leer un libro. Me sentí súper cómoda, el olor a café recién molido es increíble y te atienden con una gran sonrisa.',
-        image: 'https://ui-avatars.com/api/?name=Carmen+Batres&background=d4af37&color=fff',
+        image: 'https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779122501/cld-sample.jpg',
         stars: 5
     },
 ];
@@ -61,7 +61,7 @@ const sliderDots = document.getElementById('slider-dots');
 function renderCustomers() {
     if (!customersContainer) return;
     customersContainer.innerHTML = '';
-    
+
     customers.forEach(customer => {
         // Generar estrellas de calificación
         let starsHtml = '';

@@ -26,7 +26,7 @@ const catalogProducts = [
     {
         id: 4,
         title: "Cápsulas de Café",
-        brand: "Café G & Co. Edición Artesanal",
+        brand: "Grana",
         desc: "Disfruta de la conveniencia y calidad de nuestro café de altura en formato de cápsulas compatibles con sistemas estándar.",
         priceStr: "Q60.00",
         image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779125784/cafecapsula_cnbzoo.png"
@@ -34,99 +34,67 @@ const catalogProducts = [
     {
         id: 5,
         title: "Café Huehuetenango",
-        brand: "El dulce sabor de Guatemala",
+        brand: "Café Barista",
         desc: "Café de las altas montañas de Huehuetenango, conocido por su acidez brillante y notas afrutadas.",
         priceStr: "Q115.00",
-        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779125241/CafeMielBolsa_wlh5nx.webp"
+        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779895200/cafeHuehue_tntva9.png"
     },
     {
         id: 6,
         title: "Café Cobán Imperial",
-        brand: "BEAN AROMA CAFE",
+        brand: "Café Barista",
         desc: "Un café con cuerpo redondo, notas a chocolate oscuro y un final prolongado que recuerda a la región lluviosa de Cobán.",
         priceStr: "Q105.00",
-        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779125339/cafeSanMarcos_ichhnw.webp"
+        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779895315/cafeCoban_ohwlo1.webp"
     },
     {
         id: 7,
         title: "Café Volcán de Fuego",
-        brand: "Café G & Co. Edición Artesanal",
+        brand: "Café Isabel",
         desc: "Tueste oscuro ideal para espresso, con granos que absorben la mineralidad de los suelos volcánicos.",
         priceStr: "Q130.00",
-        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779125435/bolsaCafetela_ssuec0.jpg"
+        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779895397/cafeExpreso_gefhyw.png"
     },
     {
         id: 8,
         title: "Cápsulas Descafeinadas",
-        brand: "Café G & Co. Edición Artesanal",
+        brand: "El Corte Inglés",
         desc: "Todo el sabor y aroma de nuestro mejor café, sin la cafeína. Ideal para disfrutar de noche.",
         priceStr: "Q65.00",
-        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779125784/cafecapsula_cnbzoo.png"
+        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779895598/descafeinado_t1eui7.webp"
     },
     {
         id: 9,
         title: "Café Atitlán Clásico",
-        brand: "El dulce sabor de Guatemala",
+        brand: "El Cafetalito",
         desc: "Cultivado a las orillas del lago Atitlán, ofrece un balance perfecto con notas a caramelo y nuez.",
         priceStr: "Q110.00",
-        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779125241/CafeMielBolsa_wlh5nx.webp"
+        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779896353/cafetalito_cq9f5w.png"
     },
     {
         id: 10,
         title: "Café Fraijanes Premium",
-        brand: "BEAN AROMA CAFE",
+        brand: "Cafe Isabel",
         desc: "Granos secados al sol que destacan por su intenso aroma y acidez vibrante y jugosa.",
         priceStr: "Q125.00",
-        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779125339/cafeSanMarcos_ichhnw.webp"
+        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779895989/fraija_b1qdfa.png"
     },
     {
         id: 11,
         title: "Blend Familiar",
-        brand: "Café G & Co. Edición Artesanal",
+        brand: "San Martin",
         desc: "Nuestra mezcla especial diseñada para gustar a todos en casa. Tueste medio, sabor redondo y amigable.",
         priceStr: "Q95.00",
-        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779125435/bolsaCafetela_ssuec0.jpg"
+        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779896128/sanmartincoffee_zfvmts.jpg"
     },
     {
         id: 12,
-        title: "Café Frío Cold Brew (Pack)",
-        brand: "Café G & Co. Edición Artesanal",
+        title: "Café Frío Cold Brew",
+        brand: "Starbucks",
         desc: "Botellas listas para tomar. Café extraído en frío durante 24 horas para un sabor suave y naturalmente dulce.",
         priceStr: "Q140.00",
-        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779125784/cafecapsula_cnbzoo.png"
+        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779896455/coldBrew_bp3foq.webp"
     },
-    {
-        id: 13,
-        title: "Café Orgánico Especial",
-        brand: "El dulce sabor de Guatemala",
-        desc: "Certificado 100% orgánico, cultivado en armonía con la naturaleza sin pesticidas.",
-        priceStr: "Q135.00",
-        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779125241/CafeMielBolsa_wlh5nx.webp"
-    },
-    {
-        id: 14,
-        title: "Café Acatenango",
-        brand: "BEAN AROMA CAFE",
-        desc: "Cosechado en sombra bajo bosque, este café tiene un perfil complejo con toques florales y vainilla.",
-        priceStr: "Q115.00",
-        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779125339/cafeSanMarcos_ichhnw.webp"
-    },
-    {
-        id: 15,
-        title: "Café Tueste Claro",
-        brand: "Café G & Co. Edición Artesanal",
-        desc: "Para los amantes de los métodos de filtrado. Resalta las notas más delicadas y frutales del grano.",
-        priceStr: "Q105.00",
-        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779125435/bolsaCafetela_ssuec0.jpg"
-    },
-    {
-        id: 16,
-        title: "Filtros y Accesorios Set",
-        brand: "Café G & Co. Edición Artesanal",
-        desc: "Todo lo que necesitas para preparar la taza perfecta en casa. Incluye filtros de papel premium.",
-        priceStr: "Q85.00",
-        image: "https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779125784/cafecapsula_cnbzoo.png"
-    }
 ];
 
 const catalogContainer = document.getElementById('catalog-container');

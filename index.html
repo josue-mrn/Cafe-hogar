@@ -63,14 +63,21 @@
         }
 
         @keyframes marquee {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
+
         .animate-marquee-custom {
             display: flex;
             width: max-content;
             animation: marquee 20s linear infinite;
         }
+
         .animate-marquee-custom:hover {
             animation-play-state: paused;
         }
@@ -79,12 +86,15 @@
 
 <body class="bg-[#FFF3E6]">
     <header class="sticky top-0 z-50">
-        <div class="relative w-full overflow-hidden bg-[#FCFBFA] py-2 text-sm font-semibold select-none border-b border-gray-200">
+        <div
+            class="relative w-full overflow-hidden bg-[#FCFBFA] py-2 text-sm font-semibold select-none border-b border-gray-200">
             <div class="animate-marquee-custom">
                 <!-- Mitad 1 -->
-                <span class="pl-[100vw] text-gray-800 whitespace-nowrap flex-shrink-0">Jeancarlo Josue Marroquín Martínez 0900-26-5846</span>
+                <span class="pl-[100vw] text-gray-800 whitespace-nowrap flex-shrink-0">Jeancarlo Josue Marroquín
+                    Martínez 0900-26-5846</span>
                 <!-- Mitad 2 (idéntica para loop perfecto) -->
-                <span class="pl-[100vw] text-gray-800 whitespace-nowrap flex-shrink-0 pr-8">Jeancarlo Josue Marroquín Martínez 0900-26-5846</span>
+                <span class="pl-[100vw] text-gray-800 whitespace-nowrap flex-shrink-0 pr-8">Jeancarlo Josue Marroquín
+                    Martínez 0900-26-5846</span>
             </div>
         </div>
         <nav class="bg-[#FCFBFA]">
@@ -177,10 +187,6 @@
                             <a href="#best_sellers_sections"
                                 class="px-8 py-3.5 bg-cafecito-accent text-cafecito-dark font-bold text-sm tracking-wider uppercase rounded-full shadow-lg hover:bg-cafecito-accentHover hover:-translate-y-0.5 transition-all text-center">
                                 Explorar Menú
-                            </a>
-                            <a href="#about_section"
-                                class="px-8 py-3.5 border border-white/40 bg-white/5 backdrop-blur-sm text-white font-bold text-sm tracking-wider uppercase rounded-full hover:bg-white/10 hover:-translate-y-0.5 transition-all text-center">
-                                Nuestra Historia
                             </a>
                         </div>
                     </div>
@@ -277,7 +283,8 @@
         <!-- Sección Misión y Visión -->
         <section id="about" class="py-24 px-6 max-w-7xl mx-auto scroll-mt-32">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-xs font-black uppercase tracking-widest text-cafecito-accent mb-3 block">Nuestros Pilares</span>
+                <span class="text-xs font-black uppercase tracking-widest text-cafecito-accent mb-3 block">Nuestros
+                    Pilares</span>
                 <h2 class="font-title text-4xl md:text-5xl font-bold text-cafecito-dark">Acerca de</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -473,12 +480,8 @@
         </div>
 
         <div
-            class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cafecito-cream/40">
+            class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-cafecito-cream/40">
             <p>&copy; 2026 Café Hogar. Todos los derechos reservados.</p>
-            <div class="flex gap-6">
-                <a href="#" class="hover:text-cafecito-accent">Políticas de Privacidad</a>
-                <a href="#" class="hover:text-cafecito-accent">Términos y Condiciones</a>
-            </div>
         </div>
     </footer>
 
