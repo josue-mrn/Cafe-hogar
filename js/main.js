@@ -50,30 +50,30 @@ function renderProducts() {
 
     products.forEach(product => {
         productsContainer.innerHTML += `
-            <article class="bg-white rounded-[2.5rem] overflow-hidden shadow-md hover:shadow-[0_20px_40px_-10px_rgba(111,78,55,0.25)] hover:-translate-y-2 transition-all duration-500 border border-cafecito-medium/10 flex flex-col group h-full">
+            <article class="bg-transparent overflow-hidden flex flex-col group h-full cursor-pointer hover:-translate-y-2 transition-transform duration-500">
                 <!-- Imagen -->
-                <div class="relative overflow-hidden aspect-[4/3] bg-cafecito-cream">
+                <div class="relative overflow-hidden aspect-[4/5] rounded-3xl bg-cafecito-cream shadow-md border border-cafecito-dark/5">
                     <img src="${product.image}" alt="${product.title}" class="h-full w-full object-cover transition-transform duration-[2s] group-hover:scale-110 ease-out">
-                    <span class="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-black tracking-wide text-cafecito-medium shadow-sm transition-transform duration-300 group-hover:scale-105">
-                        ${product.priceStr}
-                    </span>
+                    <div class="absolute inset-0 bg-cafecito-dark/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
                 <!-- Contenido -->
-                <div class="p-8 flex flex-col flex-grow justify-between gap-5 relative overflow-hidden">
-                    <!-- Glow effect on hover -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-cafecito-medium/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                    
-                    <div class="space-y-3 relative z-10">
-                        <span class="text-[10px] font-bold tracking-widest text-cafecito-accent uppercase block">
-                            ${product.brand}
+                <div class="pt-6 flex flex-col flex-grow gap-2 relative">
+                    <div class="flex justify-between items-start gap-4">
+                        <div>
+                            <span class="text-[10px] font-bold tracking-widest text-cafecito-accent uppercase block mb-1">
+                                ${product.brand}
+                            </span>
+                            <h3 class="font-title text-xl font-bold text-cafecito-dark group-hover:text-cafecito-accent transition-colors duration-300">
+                                ${product.title}
+                            </h3>
+                        </div>
+                        <span class="text-sm font-black tracking-wide text-cafecito-dark bg-cafecito-accent/10 px-3 py-1 rounded-lg">
+                            ${product.priceStr}
                         </span>
-                        <h3 class="font-title text-2xl font-bold text-cafecito-dark group-hover:text-cafecito-medium transition-colors duration-300">
-                            ${product.title}
-                        </h3>
                     </div>
-                    <button onclick="openProductModal(${product.id})" class="relative z-10 w-full py-3 bg-cafecito-cream hover:bg-cafecito-medium hover:text-white text-cafecito-medium font-bold text-xs uppercase tracking-wider rounded-xl transition-all duration-300 border border-cafecito-medium/10 hover:border-transparent flex items-center justify-center gap-2 hover:shadow-[0_5px_15px_rgba(111,78,55,0.3)]">
+                    <button onclick="openProductModal(${product.id})" class="mt-4 w-fit py-2 px-6 bg-transparent border border-cafecito-dark/20 text-cafecito-dark font-bold text-xs uppercase tracking-wider rounded-full transition-all duration-300 hover:bg-cafecito-dark hover:text-white flex items-center gap-2">
                         <span>Ver detalles</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                         </svg>
                     </button>

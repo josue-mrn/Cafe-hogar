@@ -35,20 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Scroll Sticky Nav
     const mainHeader = document.getElementById('main-header');
-    const topBar = document.getElementById('top-bar');
     const mainNav = document.getElementById('main-nav');
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            topBar.classList.add('h-0', 'py-0', 'opacity-0');
-            topBar.classList.remove('py-2', 'opacity-100');
-            mainNav.classList.add('bg-[#FCFBFA]/95', 'shadow-md');
-            mainNav.classList.remove('bg-transparent', 'backdrop-blur-none');
+            mainNav.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+            mainNav.classList.remove('bg-transparent', 'py-2');
         } else {
-            topBar.classList.remove('h-0', 'py-0', 'opacity-0');
-            topBar.classList.add('py-2', 'opacity-100');
-            mainNav.classList.remove('bg-[#FCFBFA]/95', 'shadow-md');
-            mainNav.classList.add('bg-transparent', 'backdrop-blur-none');
+            mainNav.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+            mainNav.classList.add('bg-transparent', 'py-2');
         }
     });
 
