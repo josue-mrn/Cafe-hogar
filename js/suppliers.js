@@ -1,41 +1,53 @@
 const suppliers = [
     {
-        image: 'https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779129563/supracafe_l8dsy6.webp'
+        name: 'Supracafé',
+        image: 'https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779129563/supracafe_l8dsy6.webp',
+        hasDarkBg: false
     },
     {
-        image: 'https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779129489/SanMartin_mqiw7r.png'
+        name: 'San Martín',
+        image: 'https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779129489/SanMartin_mqiw7r.png',
+        hasDarkBg: false
     },
     {
-        image: 'https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779129212/elcafetalito_b8goyu.jpg'
+        name: 'El Cafetalito',
+        image: 'https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779129212/elcafetalito_b8goyu.jpg',
+        hasDarkBg: false
     },
     {
-        image: 'https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779129170/barista_hpfbcd.webp'
+        name: 'Barista',
+        image: 'https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779129170/barista_hpfbcd.webp',
+        hasDarkBg: false
     },
-]
+];
 
 const suppliersContainer = document.getElementById('suppliers-container');
 
-// Duplicamos el arreglo para que el carrusel nunca se vea vacío (efecto infinito)
+// Duplicamos el arreglo para efecto marquee infinito
 const infiniteSuppliers = [...suppliers, ...suppliers, ...suppliers, ...suppliers, ...suppliers];
 
-infiniteSuppliers.forEach(supplier => {
-    suppliersContainer.innerHTML += `
-        <div class="flex-shrink-0 w-48 h-48 flex items-center justify-center grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110 cursor-pointer">
-            <img src="${supplier.image}" alt="Proveedor" class="w-full h-full object-contain">
-        </div>
-    `;
-});
+function renderSuppliers() {
+    if (!suppliersContainer) return;
+    suppliersContainer.innerHTML = '';
 
-// Estilos dinámicos para la animación continua
+    infiniteSuppliers.forEach(supplier => {
+        suppliersContainer.innerHTML += `
+            <div class="flex-shrink-0 w-44 h-24 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-105 cursor-pointer bg-white rounded-2xl p-4 shadow-sm border border-white/20">
+                <img src="${supplier.image}" alt="${supplier.name}" class="w-full h-full object-contain">
+            </div>
+        `;
+    });
+}
+
+// Estilos de animación marquee continua
 const style = document.createElement('style');
 style.textContent = `
     @keyframes marquee {
         0% { transform: translateX(0); }
-        /* 224px es la suma del width (192px) + el gap-8 (32px) del contenedor */
-        100% { transform: translateX(calc(-224px * ${suppliers.length})); } 
+        100% { transform: translateX(calc(-228px * ${suppliers.length})); }
     }
     .animate-marquee {
-        animation: marquee 20s linear infinite;
+        animation: marquee 28s linear infinite;
         width: max-content;
     }
     .animate-marquee:hover {
@@ -44,5 +56,10 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Agregamos la clase de animación al contenedor principal
-suppliersContainer.classList.add('animate-marquee');
+if (suppliersContainer) {
+    suppliersContainer.classList.add('animate-marquee');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderSuppliers();
+});
