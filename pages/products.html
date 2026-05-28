@@ -57,7 +57,7 @@
 <body>
     <!-- Botón Regresar -->
     <a href="../index.html"
-        class="fixed top-6 left-6 z-50 bg-cafecito-dark text-cafecito-cream px-5 py-2.5 rounded-full shadow-lg hover:bg-cafecito-accent hover:text-cafecito-dark transition-all duration-300 flex items-center gap-2 font-bold text-sm tracking-wider uppercase">
+        class="absolute top-6 left-6 md:fixed z-50 bg-cafecito-dark text-cafecito-cream px-5 py-2.5 rounded-full shadow-lg hover:bg-cafecito-accent hover:text-cafecito-dark transition-all duration-300 flex items-center gap-2 font-bold text-sm tracking-wider uppercase">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
             class="w-5 h-5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
@@ -83,7 +83,7 @@
 
     <!-- Modal de Detalles de Producto -->
     <div id="product-modal"
-        class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
+        class="fixed inset-0 z-[100] flex items-start md:items-center justify-center p-4 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300 overflow-y-auto py-8 md:py-4">
         <div
             class="bg-white rounded-[2rem] w-full max-w-3xl overflow-hidden shadow-2xl border border-cafecito-medium/10 transform scale-95 transition-all duration-300 flex flex-col md:flex-row relative">
             <button id="close-modal-btn"
@@ -94,7 +94,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                 </svg>
             </button>
-            <div class="w-full md:w-1/2 aspect-square md:aspect-auto relative bg-cafecito-cream">
+            <div class="w-full md:w-1/2 aspect-[4/3] md:aspect-auto relative bg-cafecito-cream">
                 <img id="modal-product-image" src="" alt="" class="w-full h-full object-cover">
             </div>
             <div class="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center gap-5">

@@ -138,6 +138,12 @@ function renderDots() {
 window.addEventListener('resize', () => {
     const oldItemsPerView = itemsPerView;
     itemsPerView = getItemsPerView();
+    
+    // Limitar el índice actual antes de renderizar los dots y mover el slider
+    const maxIndex = customers.length - itemsPerView;
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    if (currentIndex < 0) currentIndex = 0;
+
     if (oldItemsPerView !== itemsPerView) {
         renderDots();
     }
@@ -150,8 +156,8 @@ function updateSlider() {
     if (currentIndex > maxIndex) currentIndex = maxIndex;
     if (currentIndex < 0) currentIndex = 0;
 
-    // Calcula el porcentaje a desplazar
-    const percentage = -(currentIndex * (100 / itemsPerView));
+    // Calcula el porcentaje a desplazar en base al ancho total del contenedor (customers.length)
+    const percentage = -(currentIndex * (100 / customers.length));
     customersContainer.style.transform = `translateX(${percentage}%)`;
 
     // Actualizar dots

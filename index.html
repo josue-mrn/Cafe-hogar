@@ -138,7 +138,7 @@
                 <li><a href="#about_section"
                         class="mobile-link block py-2 border-b border-cafecito-medium/5 hover:text-cafecito-accent transition-colors">Quiénes
                         Somos</a></li>
-                <li><a href="#about_section"
+                <li><a href="#about"
                         class="mobile-link block py-2 border-b border-cafecito-medium/5 hover:text-cafecito-accent transition-colors">Acerca
                         de</a></li>
                 <li><a href="#best_sellers_sections"
@@ -150,7 +150,7 @@
                 <li><a href="#customers_opinion_section"
                         class="mobile-link block py-2 border-b border-cafecito-medium/5 hover:text-cafecito-accent transition-colors">Clientes</a>
                 </li>
-                <li><a href="#location_section"
+                <li><a href="#locations_section"
                         class="mobile-link block py-2 hover:text-cafecito-accent transition-colors">Ubícanos</a></li>
             </ul>
         </div>
@@ -205,7 +205,7 @@
                     </div>
                     <!-- Tarjeta Flotante Decorativa -->
                     <div
-                        class="absolute -bottom-6 -right-6 md:right-8 bg-cafecito-dark text-cafecito-cream p-6 rounded-3xl shadow-2xl max-w-xs border border-cafecito-medium/20 hidden sm:block animate-fade-in">
+                        class="absolute -bottom-6 sm:-right-2 md:right-8 bg-cafecito-dark text-cafecito-cream p-6 rounded-3xl shadow-2xl max-w-xs border border-cafecito-medium/20 hidden sm:block animate-fade-in">
                         <div class="flex items-center gap-4 mb-3">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-7 h-7 text-cafecito-accent">
@@ -244,7 +244,7 @@
                     </p>
 
                     <!-- Cuadrícula de Atributos -->
-                    <div class="grid grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div class="flex gap-4">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="w-6 h-6 text-cafecito-accent flex-shrink-0 mt-0.5">
@@ -415,8 +415,8 @@
             </div>
         </section>
         <section id="suppliers_section"
-            class="mt-40 mb-40 px-8 scroll-mt-40 overflow-hidden relative animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <h2 class="justify-center text-6xl items-center text-center text-[#7B5940] mb-12"
+            class="my-20 md:my-32 lg:my-40 px-8 scroll-mt-40 overflow-hidden relative animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+            <h2 class="justify-center text-4xl md:text-5xl lg:text-6xl items-center text-center text-[#7B5940] mb-12"
                 style="font-family: 'Inria Serif', serif;">Nuestros Proveedores</h2>
 
             <div class="relative w-full overflow-hidden flex">
@@ -424,8 +424,8 @@
             </div>
         </section>
         <section id="locations_section"
-            class="mt-40 mb-40 px-8 scroll-mt-40 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-            <h2 class="justify-center text-6xl items-center text-center text-[#7B5940] mb-12"
+            class="my-20 md:my-32 lg:my-40 px-8 scroll-mt-40 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+            <h2 class="justify-center text-4xl md:text-5xl lg:text-6xl items-center text-center text-[#7B5940] mb-12"
                 style="font-family: 'Inria Serif', serif;">Úbicanos en</h2>
             <div id="locations-container" class="w-full flex justify-center"></div>
         </section>
@@ -511,7 +511,7 @@
 
     <!-- Modal de Detalles de Producto (Oculto por defecto) -->
     <div id="product-modal"
-        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
+        class="fixed inset-0 z-50 flex items-start md:items-center justify-center p-4 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300 overflow-y-auto py-8 md:py-4">
         <div
             class="bg-white rounded-[2rem] w-full max-w-3xl overflow-hidden shadow-2xl border border-cafecito-medium/10 transform scale-95 transition-all duration-300 flex flex-col md:flex-row relative">
 
@@ -526,7 +526,7 @@
             </button>
 
             <!-- Imagen en Modal -->
-            <div class="w-full md:w-1/2 aspect-square md:aspect-auto relative bg-cafecito-cream">
+            <div class="w-full md:w-1/2 aspect-[4/3] md:aspect-auto relative bg-cafecito-cream">
                 <img id="modal-product-image" src="" alt="" class="w-full h-full object-cover">
             </div>
 
