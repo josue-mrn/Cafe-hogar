@@ -112,9 +112,9 @@ function renderCatalog() {
 
     catalogProducts.forEach(product => {
         catalogContainer.innerHTML += `
-            <article class="animate-on-scroll opacity-0 translate-y-10 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-700 border border-cafecito-medium/10 flex flex-col group h-full">
+            <article class="animate-on-scroll opacity-0 translate-y-10 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-700 border border-cafecito-medium/10 flex flex-col group h-full isolate">
                 <!-- Imagen -->
-                <div class="relative overflow-hidden aspect-[4/3] bg-cafecito-cream">
+                <div class="relative overflow-hidden aspect-[4/3] bg-cafecito-cream rounded-t-[2rem]">
                     <img src="${product.image}" alt="${product.title}" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
                     <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-cafecito-medium shadow-sm">
                         ${product.priceStr}
