@@ -34,6 +34,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // =============================================
+    // Navbar Scroll Effect
+    // =============================================
+    const mainNav = document.getElementById('main-nav');
+    if (mainNav) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                mainNav.classList.remove('bg-transparent', 'backdrop-blur-md');
+                mainNav.style.backgroundColor = '#FCF9F5';
+                mainNav.style.boxShadow = '0 2px 12px rgba(43,23,12,0.08)';
+            } else {
+                mainNav.classList.add('bg-transparent', 'backdrop-blur-md');
+                mainNav.style.backgroundColor = '';
+                mainNav.style.boxShadow = '';
+            }
+        });
+    }
+
+    // =============================================
     // Intersection Observer para Animaciones de Scroll
     // =============================================
     const scrollObserverOptions = {

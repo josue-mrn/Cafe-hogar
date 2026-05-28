@@ -153,7 +153,7 @@ window.selectLocation = function(id) {
             </div>
 
             <!-- Action Buttons -->
-            <div class="flex flex-col sm:flex-row gap-3 mb-10">
+            <div class="flex flex-col sm:flex-row gap-3 mt-8">
                 <a href="${loc.googleMapsUrl}" target="_blank" 
                    class="flex items-center justify-center gap-2 bg-white border border-cafecito-medium/20 text-cafecito-dark hover:bg-gray-50 px-5 py-3 rounded-xl font-bold shadow-sm transition-all text-sm w-full">
                     <i class="fa-solid fa-map-location-dot text-[#EA4335]"></i>
@@ -165,22 +165,7 @@ window.selectLocation = function(id) {
                     Waze
                 </a>
             </div>
-
-            <!-- Socials -->
-            <div>
-                <h4 class="font-bold text-cafecito-dark text-sm mb-4">Contacto Directo</h4>
-                <div class="flex gap-4">
-                    ${Object.entries(loc.socials).map(([key, social]) => {
-                        if (social.gradient) {
-                            return `<a href="${social.url}" target="_blank" class="w-11 h-11 rounded-full flex items-center justify-center text-white shadow-md transition-transform hover:scale-110 bg-gradient-to-tr ${social.gradient}"><i class="fa-brands ${social.icon} text-lg"></i></a>`;
-                        } else {
-                            return `<a href="${social.url}" target="_blank" class="w-11 h-11 rounded-full flex items-center justify-center text-white shadow-md transition-transform hover:scale-110" style="background-color: ${social.color}"><i class="fa-brands ${social.icon} text-lg"></i></a>`;
-                        }
-                    }).join('')}
-                </div>
-            </div>
         </div>
-
         <!-- Right Column: Map Embed -->
         <div class="w-full lg:w-7/12 min-h-[400px] lg:min-h-full bg-gray-100 relative">
             <iframe 
