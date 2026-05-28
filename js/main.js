@@ -50,27 +50,30 @@ function renderProducts() {
 
     products.forEach(product => {
         productsContainer.innerHTML += `
-            <article class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 border border-cafecito-medium/10 flex flex-col group h-full">
+            <article class="bg-transparent overflow-hidden flex flex-col group h-full cursor-pointer hover:-translate-y-2 transition-transform duration-500">
                 <!-- Imagen -->
-                <div class="relative overflow-hidden aspect-[4/3] bg-cafecito-cream">
-                    <img src="${product.image}" alt="${product.title}" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-cafecito-medium shadow-sm">
-                        ${product.priceStr}
-                    </span>
+                <div class="relative overflow-hidden aspect-[4/5] rounded-3xl bg-cafecito-cream shadow-md border border-cafecito-dark/5">
+                    <img src="${product.image}" alt="${product.title}" class="h-full w-full object-cover transition-transform duration-[2s] group-hover:scale-110 ease-out">
+                    <div class="absolute inset-0 bg-cafecito-dark/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
                 <!-- Contenido -->
-                <div class="p-6 flex flex-col flex-grow justify-between gap-4">
-                    <div class="space-y-2">
-                        <span class="text-[10px] font-bold tracking-widest text-cafecito-accent uppercase block">
-                            ${product.brand}
+                <div class="pt-6 flex flex-col flex-grow gap-2 relative">
+                    <div class="flex justify-between items-start gap-4">
+                        <div>
+                            <span class="text-[10px] font-bold tracking-widest text-cafecito-accent uppercase block mb-1">
+                                ${product.brand}
+                            </span>
+                            <h3 class="font-title text-xl font-bold text-cafecito-dark group-hover:text-cafecito-accent transition-colors duration-300">
+                                ${product.title}
+                            </h3>
+                        </div>
+                        <span class="text-sm font-black tracking-wide text-cafecito-dark bg-cafecito-accent/10 px-3 py-1 rounded-lg">
+                            ${product.priceStr}
                         </span>
-                        <h3 class="font-title text-xl font-bold text-cafecito-dark group-hover:text-cafecito-medium transition-colors">
-                            ${product.title}
-                        </h3>
                     </div>
-                    <button onclick="openProductModal(${product.id})" class="w-full py-2.5 bg-cafecito-cream hover:bg-cafecito-medium hover:text-white text-cafecito-medium font-bold text-xs uppercase tracking-wider rounded-xl transition-all duration-300 border border-cafecito-medium/10 flex items-center justify-center gap-1.5">
+                    <button onclick="openProductModal(${product.id})" class="mt-4 w-fit py-2 px-6 bg-transparent border border-cafecito-dark/20 text-cafecito-dark font-bold text-xs uppercase tracking-wider rounded-full transition-all duration-300 hover:bg-cafecito-dark hover:text-white flex items-center gap-2">
                         <span>Ver detalles</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                         </svg>
                     </button>
