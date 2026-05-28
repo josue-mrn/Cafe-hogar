@@ -13,13 +13,13 @@
                 extend: {
                     colors: {
                         cafecito: {
-                            dark: '#1A110A',      // Deep Espresso
-                            medium: '#4A3222',    // Roasted Coffee
-                            light: '#DAB89C',     // Latte
-                            accent: '#A67B5B',    // Mocha Accent
-                            cream: '#F8F3ED',     // Crema Tostada
-                            card: '#FFFFFF',      // White cards
-                            accentHover: '#8A6246' // Darker Mocha
+                            dark: '#2B170C',      // Espresso oscuro
+                            medium: '#6F4E37',    // Marrón café
+                            light: '#A87C5C',     // Café con leche
+                            accent: '#C79A65',    // Dorado cálido / miel
+                            cream: '#FCF9F5',     // Crema suave de fondo
+                            card: '#FFFFFF',      // Tarjetas en blanco
+                            accentHover: '#B58652' // Hover dorado
                         }
                     },
                     fontFamily: {
@@ -63,8 +63,13 @@
         }
 
         @keyframes marquee {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
 
         .animate-marquee-custom {
@@ -76,63 +81,41 @@
         .animate-marquee-custom:hover {
             animation-play-state: paused;
         }
-
-        /* Scroll Reveal Animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .reveal-left {
-            opacity: 0;
-            transform: translateX(-40px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .reveal-left.active {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        .reveal-right {
-            opacity: 0;
-            transform: translateX(40px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .reveal-right.active {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
-        .delay-100 { transition-delay: 100ms; }
-        .delay-200 { transition-delay: 200ms; }
-        .delay-300 { transition-delay: 300ms; }
-        .delay-400 { transition-delay: 400ms; }
-
     </style>
 </head>
 
-<body class="bg-cafecito-cream text-cafecito-dark">
-    <header class="fixed top-0 w-full z-50 transition-all duration-300" id="main-header">
-        <nav id="main-nav" class="bg-transparent transition-colors duration-300 py-2">
-            <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                <!-- Logo con fondo blanco para integrarlo correctamente -->
-                <a href="#hero_section" class="bg-white p-2.5 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                    <img src="https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779122594/CafeHogar_lxljyd.svg"
-                        alt="cafe_hogar_logo" class="h-12 md:h-16 w-auto">
-                </a>
-
-                <!-- Enlaces de navegación desktop -->
-                <ul class="hidden lg:flex list-none items-center gap-10 font-medium text-sm text-cafecito-dark">
-                    <li><a href="#about_section" class="hover:text-cafecito-accent transition-colors">Quiénes Somos</a></li>
-                    <li><a href="#about" class="hover:text-cafecito-accent transition-colors">Acerca de</a></li>
-                    <li><a href="#best_sellers_sections" class="hover:text-cafecito-accent transition-colors">Productos</a></li>
-                    <li><a href="#suppliers_section" class="hover:text-cafecito-accent transition-colors">Proveedores</a></li>
-                    <li><a href="#customers_opinion_section" class="hover:text-cafecito-accent transition-colors">Clientes</a></li>
-                    <li><a href="#locations_section" class="hover:text-cafecito-accent transition-colors">Contáctanos</a></li>
-                </ul>
+<body class="bg-[#FFF3E6]">
+    <header class="sticky top-0 z-50">
+        <div
+            class="relative w-full overflow-hidden bg-[#FCFBFA] py-2 text-sm font-semibold select-none border-b border-gray-200">
+            <div class="animate-marquee-custom">
+                <!-- Mitad 1 -->
+                <span class="pl-[100vw] text-gray-800 whitespace-nowrap flex-shrink-0">Jeancarlo Josue Marroquín
+                    Martínez 0900-26-5846</span>
+                <!-- Mitad 2 (idéntica para loop perfecto) -->
+                <span class="pl-[100vw] text-gray-800 whitespace-nowrap flex-shrink-0 pr-8">Jeancarlo Josue Marroquín
+                    Martínez 0900-26-5846</span>
+            </div>
+        </div>
+        <nav class="bg-[#FCFBFA]">
+            <ul class="list-none flex p-4 items-center justify-center gap-[100px]">
+                <li><a>Quienes somos</a></li>
+                <li><a href="#about">Acerca de</a></li>
+                <li><a href="#locations_section">Contactanos</a></li>
+                <li>
+                    <a href="#hero_section">
+                        <img src="https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779122594/CafeHogar_lxljyd.svg"
+                            alt="cafe_hogar_logo" class="h-20">
+                    </a>
+                </li>
+                <li>
+                    <a href="#best_sellers_sections">Productos</a>
+                </li>
+                <li><a href="#suppliers_section">Proveedores</a></li>
+                <li>
+                    <a href="#customers_opinion_section">Clientes</a>
+                </li>
+            </ul>
 
             <!-- Acciones Derecha (Menú y Botones) -->
             <div class="flex items-center gap-4">
@@ -176,67 +159,33 @@
         </div>
     </header>
 
-    <main class="flex-grow pt-28">
-        <!-- Sección Hero Premium: Split Screen -->
-        <section class="relative px-6 py-10 md:py-20 max-w-7xl mx-auto reveal" id="hero_section">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Text Content -->
-                <div class="max-w-2xl order-2 lg:order-1">
-                    <span class="inline-block px-4 py-1.5 bg-cafecito-accent/10 rounded-full text-cafecito-accent text-xs font-bold uppercase tracking-widest mb-6 reveal delay-100 border border-cafecito-accent/20">
-                        Granos de origen excepcional
-                    </span>
-                    <h1 class="font-title text-6xl md:text-7xl lg:text-[5.5rem] font-bold leading-[1.1] text-cafecito-dark mb-6 reveal delay-200">
-                        Café<br /><span class="text-cafecito-accent italic">Hogar</span>
-                    </h1>
-                    <p class="text-lg text-cafecito-medium/80 max-w-md mb-10 leading-relaxed reveal delay-300">
-                        El auténtico sabor de estar en familia. Tostado con pasión en las altas tierras guatemaltecas para brindar un aroma inolvidable.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-5 reveal delay-400">
-                        <a href="#best_sellers_sections"
-                            class="px-8 py-4 bg-cafecito-dark text-cafecito-cream font-bold text-sm tracking-widest uppercase rounded-xl hover:bg-cafecito-accent transition-colors duration-300 text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
-                            Explorar Menú
-                        </a>
-                        <a href="#about_section"
-                            class="px-8 py-4 bg-transparent border-2 border-cafecito-dark/10 text-cafecito-dark font-bold text-sm tracking-widest uppercase rounded-xl hover:border-cafecito-dark transition-all duration-300 text-center">
-                            Nuestra Historia
-                        </a>
-                    </div>
-                </div>
-                <!-- Image Arch -->
-                <div class="relative order-1 lg:order-2 flex justify-center lg:justify-end reveal-right delay-200">
-                    <div class="relative w-full max-w-md aspect-[3/4] overflow-hidden rounded-t-full rounded-b-3xl shadow-2xl border-4 border-white/50">
-                        <img src="https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779222856/new_banner_kwpfwc.jpg"
-                            alt="hero_banner"
-                            class="w-full h-full object-cover transition-transform duration-[8s] hover:scale-110 ease-out" id="hero-img">
-                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-cafecito-dark/40"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <main class="flex-grow">
+        <!-- Sección Hero Premium -->
+        <section class="relative px-6 py-10 md:py-16 max-w-7xl mx-auto" id="hero_section">
             <div
                 class="relative w-full h-[550px] rounded-[2.5rem] overflow-hidden shadow-2xl border border-cafecito-medium/10 group">
                 <!-- Imagen con Zoom Sutil en Carga/Hover -->
                 <img src="https://res.cloudinary.com/dacothbhi/image/upload/q_auto/f_auto/v1779222856/new_banner_kwpfwc.jpg"
                     alt="hero_banner"
-                    class="w-full h-full object-cover transition-transform duration-[6s] group-hover:scale-110 ease-out" id="hero-img">
+                    class="w-full h-full object-cover transition-transform duration-[4s] group-hover:scale-105">
                 <!-- Overlay de Gradiente -->
                 <div
-                    class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-cafecito-dark/95 via-cafecito-dark/60 to-transparent flex flex-col items-start justify-end md:justify-center p-8 md:p-20 text-white">
-                    <div class="max-w-2xl">
+                    class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-cafecito-dark/90 via-cafecito-dark/65 to-transparent flex flex-col items-start justify-end md:justify-center p-8 md:p-20 text-white">
+                    <div class="max-w-2xl animate-slide-up">
                         <span
-                            class="inline-block px-3 py-1 bg-cafecito-accent/25 border border-cafecito-accent/40 rounded-full text-cafecito-accent text-xs font-semibold uppercase tracking-widest mb-6 reveal delay-100">
+                            class="inline-block px-3 py-1 bg-cafecito-accent/25 border border-cafecito-accent/40 rounded-full text-cafecito-accent text-xs font-semibold uppercase tracking-widest mb-6">
                             Granos de origen excepcional
                         </span>
                         <h1
-                            class="font-title text-5xl md:text-7xl lg:text-8xl font-bold leading-tight drop-shadow-sm mb-4 reveal delay-200">
+                            class="font-title text-5xl md:text-7xl lg:text-8xl font-bold leading-tight drop-shadow-sm mb-4">
                             Café<br /><span class="text-cafecito-accent">Hogar</span>
                         </h1>
-                        <p class="text-lg md:text-xl font-light text-cafecito-cream/90 max-w-lg mb-8 italic reveal delay-300">
+                        <p class="text-lg md:text-xl font-light text-cafecito-cream/90 max-w-lg mb-8 italic">
                             "El auténtico sabor de estar en familia. Tostado con amor en tierras guatemaltecas."
                         </p>
-                        <div class="flex flex-col sm:flex-row gap-4 reveal delay-400">
+                        <div class="flex flex-col sm:flex-row gap-4">
                             <a href="#best_sellers_sections"
-                                class="px-8 py-3.5 bg-cafecito-accent text-cafecito-dark font-bold text-sm tracking-wider uppercase rounded-full shadow-[0_0_15px_rgba(199,154,101,0.5)] hover:shadow-[0_0_25px_rgba(199,154,101,0.8)] hover:bg-cafecito-accentHover hover:-translate-y-1 transition-all duration-300 text-center">
+                                class="px-8 py-3.5 bg-cafecito-accent text-cafecito-dark font-bold text-sm tracking-wider uppercase rounded-full shadow-lg hover:bg-cafecito-accentHover hover:-translate-y-0.5 transition-all text-center">
                                 Explorar Menú
                             </a>
                         </div>
@@ -245,56 +194,95 @@
             </div>
         </section>
 
-        <!-- Sección Quiénes Somos / Acerca de (Bento Grid) -->
+        <!-- Sección Quiénes Somos / Acerca de (NUEVA) -->
         <section id="about_section" class="py-24 px-6 max-w-7xl mx-auto scroll-mt-24">
-            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-                <span class="text-xs font-black uppercase tracking-widest text-cafecito-accent mb-3 block">Nuestra Esencia</span>
-                <h2 class="font-title text-4xl md:text-5xl font-bold text-cafecito-dark">El calor de un hogar en cada taza</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
-                <!-- Large Image Block -->
-                <div class="md:col-span-2 md:row-span-2 rounded-[2rem] overflow-hidden relative shadow-lg reveal-left">
-                    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=1200"
-                        alt="Grano de café tostado" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-cafecito-dark/30 hover:bg-transparent transition-colors duration-500"></div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Columna Izquierda: Collage / Imagen de Estilo -->
+                <div class="relative">
+                    <div
+                        class="aspect-square md:aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl border border-cafecito-medium/10">
+                        <!-- Imagen representativa de café de alta calidad -->
+                        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=1200"
+                            alt="Grano de café tostado" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Tarjeta Flotante Decorativa -->
+                    <div
+                        class="absolute -bottom-6 -right-6 md:right-8 bg-cafecito-dark text-cafecito-cream p-6 rounded-3xl shadow-2xl max-w-xs border border-cafecito-medium/20 hidden sm:block animate-fade-in">
+                        <div class="flex items-center gap-4 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-7 h-7 text-cafecito-accent">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                            </svg>
+                            <div>
+                                <h4 class="font-bold text-base">Calidad 100%</h4>
+                                <p class="text-xs text-cafecito-cream/70">Tueste Artesanal</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-cafecito-cream/80 leading-relaxed">
+                            Cuidamos cada grano desde la finca hasta tu taza familiar para garantizar notas de sabor
+                            óptimas.
+                        </p>
+                    </div>
                 </div>
-                
-                <!-- Text Block -->
-                <div class="bg-white rounded-[2rem] p-8 shadow-sm flex flex-col justify-center border border-cafecito-medium/10 reveal-right delay-100">
-                    <h4 class="font-title text-2xl font-bold text-cafecito-dark mb-4">Tradición Viva</h4>
-                    <p class="text-sm text-cafecito-medium/80 leading-relaxed">
-                        Nacimos de la pasión por los granos guatemaltecos. Cada taza cuenta una historia de esfuerzo y el sabor inconfundible del café de altura.
+
+                <!-- Columna Derecha: Texto e Historia -->
+                <div class="flex flex-col justify-center">
+                    <span class="text-xs font-black uppercase tracking-widest text-cafecito-accent mb-3">Nuestra
+                        Esencia</span>
+                    <h2 class="font-title text-4xl md:text-5xl font-bold text-cafecito-dark mb-6 leading-tight">
+                        El calor de un hogar en cada taza de café
+                    </h2>
+                    <p class="text-cafecito-dark/80 text-base leading-relaxed mb-6">
+                        En <strong class="text-cafecito-medium">Café Hogar</strong>, creemos que la mesa es el lugar
+                        donde los mejores recuerdos se cocinan y las conversaciones fluyen. Nacimos de la pasión por los
+                        granos guatemaltecos, cosechados con el esfuerzo de familias productoras locales de Antigua, San
+                        Marcos y Huehuetenango.
                     </p>
-                </div>
-                
-                <!-- Features Block -->
-                <div class="bg-cafecito-dark rounded-[2rem] p-8 shadow-sm flex flex-col justify-center text-cafecito-cream reveal-right delay-200">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="p-3 bg-cafecito-accent/20 rounded-xl text-cafecito-accent">
-                            <i class="fa-solid fa-leaf text-xl"></i>
+                    <p class="text-cafecito-dark/80 text-base leading-relaxed mb-8">
+                        Cada taza cuenta una historia de tradición, esfuerzo y el sabor inconfundible del café de
+                        altura. Nos enorgullece ofrecerte un grano seleccionado con los estándares más altos de comercio
+                        justo y sostenibilidad.
+                    </p>
+
+                    <!-- Cuadrícula de Atributos -->
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 text-cafecito-accent flex-shrink-0 mt-0.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.249 2.249 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643" />
+                            </svg>
+                            <div>
+                                <h4 class="font-bold text-cafecito-dark text-sm">Origen Sostenible</h4>
+                                <p class="text-xs text-cafecito-dark/60 mt-1">Granos de fincas con prácticas
+                                    eco-amigables.</p>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="font-bold text-base">Origen Sostenible</h4>
-                            <p class="text-xs text-cafecito-cream/60">Fincas eco-amigables</p>
+                        <div class="flex gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 text-cafecito-accent flex-shrink-0 mt-0.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z" />
+                            </svg>
+                            <div>
+                                <h4 class="font-bold text-cafecito-dark text-sm">Tueste Local</h4>
+                                <p class="text-xs text-cafecito-dark/60 mt-1">Lotes pequeños tostados a la perfección
+                                    semanalmente.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex items-center gap-4">
-                        <div class="p-3 bg-cafecito-accent/20 rounded-xl text-cafecito-accent">
-                            <i class="fa-solid fa-fire-flame-curved text-xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-base">Tueste Local</h4>
-                            <p class="text-xs text-cafecito-cream/60">Lotes pequeños tostados a la perfección</p>
-                        </div>
-                    </div>
+
                 </div>
+            </div>
             </div>
         </section>
 
         <!-- Sección Misión y Visión -->
         <section id="about" class="py-24 px-6 max-w-7xl mx-auto scroll-mt-32">
-            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+            <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="text-xs font-black uppercase tracking-widest text-cafecito-accent mb-3 block">Nuestros
                     Pilares</span>
                 <h2 class="font-title text-4xl md:text-5xl font-bold text-cafecito-dark">Acerca de</h2>
@@ -302,11 +290,18 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <!-- Misión -->
                 <div
-                    class="reveal-left bg-white p-10 rounded-3xl border-t-4 border-cafecito-accent shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                    class="bg-white p-10 rounded-[2.5rem] border border-cafecito-medium/10 shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300">
                     <div class="flex items-center gap-5 mb-6">
-                        <h3 class="font-title font-bold text-cafecito-dark text-3xl">Misión</h3>
+                        <div class="bg-cafecito-accent/15 p-4 rounded-2xl text-cafecito-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="w-8 h-8">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
+                            </svg>
+                        </div>
+                        <h3 class="font-title font-bold text-cafecito-dark text-3xl">Nuestra Misión</h3>
                     </div>
-                    <p class="text-base text-cafecito-medium leading-relaxed">
+                    <p class="text-base text-cafecito-dark/80 leading-relaxed">
                         Ofrecer a las familias guatemaltecas el mejor café artesanal, fomentando momentos invaluables en
                         cada hogar mientras apoyamos el comercio justo y el trabajo de nuestros productores locales.
                     </p>
@@ -314,11 +309,20 @@
 
                 <!-- Visión -->
                 <div
-                    class="reveal-right delay-200 bg-white p-10 rounded-3xl border-t-4 border-cafecito-dark shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                    class="bg-white p-10 rounded-[2.5rem] border border-cafecito-medium/10 shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300">
                     <div class="flex items-center gap-5 mb-6">
-                        <h3 class="font-title font-bold text-cafecito-dark text-3xl">Visión</h3>
+                        <div class="bg-cafecito-accent/15 p-4 rounded-2xl text-cafecito-accent">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="w-8 h-8">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-title font-bold text-cafecito-dark text-3xl">Nuestra Visión</h3>
                     </div>
-                    <p class="text-base text-cafecito-medium leading-relaxed">
+                    <p class="text-base text-cafecito-dark/80 leading-relaxed">
                         Ser reconocidos como el café referente en los hogares de Guatemala, expandiendo nuestra pasión
                         por la calidad y manteniendo intacta la tradición familiar en cada taza que servimos.
                     </p>
@@ -330,7 +334,7 @@
         <section class="py-24 bg-gradient-to-b from-transparent to-cafecito-medium/5 px-6 scroll-mt-24"
             id="best_sellers_sections">
             <div class="max-w-7xl mx-auto">
-                <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <div class="text-center max-w-2xl mx-auto mb-16">
                     <span class="text-xs font-black uppercase tracking-widest text-cafecito-accent mb-3 block">Nuestras
                         Recomendaciones</span>
                     <h2 class="font-title text-4xl md:text-5xl font-bold text-cafecito-dark">Productos Destacados</h2>
@@ -346,9 +350,9 @@
                 </div>
 
                 <!-- Botón de Ver Más Mejorado -->
-                <div class="text-center mt-14 reveal delay-200">
+                <div class="text-center mt-14">
                     <a href="./pages/products.html"
-                        class="inline-flex items-center gap-2 px-8 py-3 border border-cafecito-medium text-cafecito-medium font-bold text-sm tracking-wider uppercase rounded-full hover:bg-cafecito-medium hover:text-white transition-all duration-500 shadow-sm hover:shadow-[0_8px_20px_-5px_rgba(111,78,55,0.4)]">
+                        class="inline-flex items-center gap-2 px-8 py-3 border border-cafecito-medium/30 text-cafecito-medium font-bold text-sm tracking-wider uppercase rounded-full hover:bg-cafecito-medium hover:text-white transition-all duration-300 shadow-sm">
                         Ver Menú Completo
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                             stroke="currentColor" class="w-4 h-4">
@@ -362,7 +366,7 @@
         <!-- Sección Clientes (Testimonios) -->
         <section class="py-24 px-6 scroll-mt-24 overflow-hidden" id="customers_opinion_section">
             <div class="max-w-7xl mx-auto relative">
-                <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <div class="text-center max-w-2xl mx-auto mb-16">
                     <span class="text-xs font-black uppercase tracking-widest text-cafecito-accent mb-3 block">Comunidad
                         Café Hogar</span>
                     <h2 class="font-title text-4xl md:text-5xl font-bold text-cafecito-dark">Clientes Satisfechos</h2>
@@ -373,7 +377,7 @@
                 </div>
 
                 <!-- Slider Component -->
-                <div class="relative px-2 sm:px-12 reveal delay-200">
+                <div class="relative px-2 sm:px-12">
                     <!-- Botón Prev -->
                     <button id="prev-btn"
                         class="absolute left-0 top-1/2 -translate-y-1/2 bg-white p-3.5 rounded-full shadow-lg text-cafecito-dark hover:text-cafecito-accent hover:scale-110 border border-cafecito-medium/10 transition-all focus:outline-none z-10 hidden md:flex items-center justify-center"
@@ -409,30 +413,22 @@
             </div>
         </section>
         <section id="suppliers_section" class="mt-40 mb-40 px-8 scroll-mt-40 overflow-hidden relative">
-            <h2 class="justify-center text-6xl items-center text-center text-[#7B5940] mb-12 reveal"
+            <h2 class="justify-center text-6xl items-center text-center text-[#7B5940] mb-12"
                 style="font-family: 'Inria Serif', serif;">Nuestros Proveedores</h2>
 
-            <div class="relative w-full overflow-hidden flex reveal delay-200">
+            <div class="relative w-full overflow-hidden flex">
                 <div id="suppliers-container" class="flex gap-8 items-center"></div>
             </div>
         </section>
         <section id="locations_section" class="mt-40 mb-40 px-8 scroll-mt-40">
-            <h2 class="justify-center text-6xl items-center text-center text-[#7B5940] mb-12 reveal"
+            <h2 class="justify-center text-6xl items-center text-center text-[#7B5940] mb-12"
                 style="font-family: 'Inria Serif', serif;">Úbicanos en</h2>
-            <div id="locations-container" class="w-full flex justify-center reveal delay-200"></div>
+            <div id="locations-container" class="w-full flex justify-center"></div>
         </section>
     </main>
 
     <!-- Footer Premium -->
-    <footer class="bg-cafecito-dark text-cafecito-cream/80 py-16 px-6 mt-16 rounded-t-[3rem]">
-        <!-- Marquesina en Footer -->
-        <div class="w-full overflow-hidden mb-16 border-b border-white/10 pb-4 text-xs font-semibold select-none text-cafecito-cream/60">
-            <div class="animate-marquee-custom">
-                <span class="pl-[100vw] whitespace-nowrap flex-shrink-0 uppercase tracking-widest">Jeancarlo Josue Marroquín Martínez 0900-26-5846</span>
-                <span class="pl-[100vw] whitespace-nowrap flex-shrink-0 uppercase tracking-widest">Jeancarlo Josue Marroquín Martínez 0900-26-5846</span>
-            </div>
-        </div>
-        
+    <footer class="bg-cafecito-dark text-cafecito-cream/80 border-t border-white/5 py-16 px-6">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
             <!-- Columna 1: Branding -->
             <div class="flex flex-col gap-4">

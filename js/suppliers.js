@@ -32,8 +32,8 @@ function renderSuppliers() {
 
     infiniteSuppliers.forEach(supplier => {
         suppliersContainer.innerHTML += `
-            <div class="flex-shrink-0 w-48 h-24 flex items-center justify-center grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer mx-4">
-                <img src="${supplier.image}" alt="${supplier.name}" class="max-w-full max-h-full object-contain">
+            <div class="flex-shrink-0 w-44 h-24 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-105 cursor-pointer bg-white rounded-2xl p-4 shadow-sm border border-white/20">
+                <img src="${supplier.image}" alt="${supplier.name}" class="w-full h-full object-contain">
             </div>
         `;
     });

@@ -74,29 +74,29 @@ function renderCustomers() {
         }
 
         customersContainer.innerHTML += `
-            <article class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-4 h-full">
-                <div class="bg-transparent rounded-[2.5rem] p-10 h-full flex flex-col justify-between border border-cafecito-dark/10 hover:bg-white hover:shadow-[0_20px_40px_-10px_rgba(26,17,10,0.1)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden group">
+            <article class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-4">
+                <div class="bg-white rounded-[2rem] p-8 shadow-sm h-full flex flex-col justify-between border border-cafecito-medium/10 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
                     <!-- Comillas decorativas de fondo -->
-                    <span class="absolute -left-2 -top-6 text-[12rem] leading-none text-cafecito-dark/5 font-serif select-none pointer-events-none group-hover:scale-110 group-hover:translate-x-2 group-hover:text-cafecito-accent/10 transition-all duration-700 ease-out z-0">“</span>
+                    <span class="absolute -right-2 -bottom-6 text-9xl text-cafecito-accent/10 font-serif select-none pointer-events-none group-hover:scale-110 transition-transform duration-500">“</span>
                     
-                    <div class="space-y-6 relative z-10">
+                    <div class="space-y-6">
                         <!-- Estrellas y Opinión -->
-                        <div class="space-y-5">
-                            <div class="flex gap-1 text-xl">
+                        <div class="space-y-4">
+                            <div class="flex gap-0.5 text-lg">
                                 ${starsHtml}
                             </div>
-                            <blockquote class="text-cafecito-dark/85 font-serif italic leading-relaxed text-sm md:text-base">
+                            <blockquote class="text-cafecito-dark/85 italic leading-relaxed text-sm">
                                 "${customer.opinion}"
                             </blockquote>
                         </div>
                     </div>
 
                     <!-- Usuario -->
-                    <div class="flex items-center gap-4 mt-10 pt-6 border-t border-cafecito-dark/10 relative z-10">
-                        <img src="${customer.image}" alt="${customer.name}" class="w-14 h-14 rounded-full object-cover shadow-sm border border-cafecito-dark/20 group-hover:border-cafecito-accent transition-colors duration-300">
+                    <div class="flex items-center gap-4 mt-8 pt-6 border-t border-cafecito-cream relative z-10">
+                        <img src="${customer.image}" alt="${customer.name}" class="w-12 h-12 rounded-full object-cover shadow-sm border-2 border-cafecito-accent/30">
                         <div>
-                            <p class="font-bold text-base text-cafecito-dark group-hover:text-cafecito-accent transition-colors duration-300">${customer.name}</p>
-                            <p class="text-[11px] text-cafecito-dark/50 font-medium tracking-wide uppercase">Cliente Verificado</p>
+                            <p class="font-bold text-sm text-cafecito-dark">${customer.name}</p>
+                            <p class="text-[10px] text-cafecito-dark/50 font-medium">Cliente Verificado</p>
                         </div>
                     </div>
                 </div>
