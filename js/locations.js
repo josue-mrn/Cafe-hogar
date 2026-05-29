@@ -165,6 +165,31 @@ window.selectLocation = function(id) {
                     Waze
                 </a>
             </div>
+
+            <!-- Contact Info -->
+            <div class="mt-8 border-t border-cafecito-medium/10 pt-6">
+                <h4 class="font-bold text-cafecito-dark text-sm mb-4">Contacto</h4>
+                <div class="flex flex-wrap gap-4 items-center">
+                    <a href="mailto:info@cafehogar.com" class="flex items-center gap-2 text-sm text-cafecito-dark/80 hover:text-cafecito-accent transition-colors font-medium">
+                        <i class="fa-regular fa-envelope text-cafecito-accent text-lg"></i>
+                        info@cafehogar.com
+                    </a>
+                    
+                    <div class="h-4 w-px bg-cafecito-medium/30 hidden sm:block"></div>
+
+                    <div class="flex gap-3">
+                        <a href="${loc.socials.whatsapp.url}" target="_blank" class="w-8 h-8 rounded-full flex items-center justify-center text-white shadow-sm hover:scale-110 transition-transform" style="background-color: ${loc.socials.whatsapp.color}">
+                            <i class="fa-brands ${loc.socials.whatsapp.icon} text-sm"></i>
+                        </a>
+                        <a href="${loc.socials.facebook.url}" target="_blank" class="w-8 h-8 rounded-full flex items-center justify-center text-white shadow-sm hover:scale-110 transition-transform" style="background-color: ${loc.socials.facebook.color}">
+                            <i class="fa-brands ${loc.socials.facebook.icon} text-sm"></i>
+                        </a>
+                        <a href="${loc.socials.instagram.url}" target="_blank" class="w-8 h-8 rounded-full flex items-center justify-center text-white shadow-sm hover:scale-110 transition-transform bg-gradient-to-tr ${loc.socials.instagram.gradient}">
+                            <i class="fa-brands ${loc.socials.instagram.icon} text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Right Column: Map Embed -->
         <div class="w-full lg:w-7/12 min-h-[300px] md:min-h-[400px] lg:min-h-full bg-gray-100 relative">
