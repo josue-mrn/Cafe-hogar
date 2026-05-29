@@ -67,7 +67,7 @@ function renderLocationsSection() {
 
     // 1. Render Tabs
     const tabsHtml = `
-        <div class="flex flex-wrap justify-center gap-4 w-full bg-white/50 backdrop-blur-md p-2 rounded-full border border-cafecito-medium/10 shadow-sm max-w-fit">
+        <div class="flex flex-wrap justify-center gap-4 w-full bg-white/50 backdrop-blur-md p-2 rounded-3xl md:rounded-full border border-cafecito-medium/10 shadow-sm max-w-fit">
             ${locations.map((loc, index) => `
                 <button onclick="selectLocation('${loc.id}')" id="tab-${loc.id}" 
                     class="px-6 py-2.5 rounded-full font-bold text-sm tracking-wide transition-all duration-300 ${index === 0 ? 'bg-cafecito-dark text-white shadow-md' : 'text-cafecito-dark/60 hover:text-cafecito-dark hover:bg-cafecito-medium/10'}">
@@ -167,7 +167,7 @@ window.selectLocation = function(id) {
             </div>
         </div>
         <!-- Right Column: Map Embed -->
-        <div class="w-full lg:w-7/12 min-h-[400px] lg:min-h-full bg-gray-100 relative">
+        <div class="w-full lg:w-7/12 min-h-[300px] md:min-h-[400px] lg:min-h-full bg-gray-100 relative">
             <iframe 
                 src="${loc.embedUrl}" 
                 class="absolute inset-0 w-full h-full border-0"
