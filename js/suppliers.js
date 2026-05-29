@@ -44,7 +44,7 @@ const style = document.createElement('style');
 style.textContent = `
     @keyframes marquee {
         0% { transform: translateX(0); }
-        100% { transform: translateX(calc(-228px * ${suppliers.length})); }
+        100% { transform: translateX(calc(-13rem * ${suppliers.length})); }
     }
     .animate-marquee {
         animation: marquee 28s linear infinite;

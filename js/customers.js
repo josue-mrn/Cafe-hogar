@@ -75,7 +75,7 @@ function renderCustomers() {
 
         customersContainer.innerHTML += `
             <article class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4 py-4">
-                <div class="bg-white/40 backdrop-blur-md hover:bg-white rounded-[2rem] p-8 shadow-sm h-full flex flex-col justify-between border border-cafecito-medium/10 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group">
+                <div class="bg-white/40 backdrop-blur-md hover:bg-white rounded-[2rem] p-8 shadow-sm h-full flex flex-col justify-between border border-cafecito-medium/10 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group isolate">
                     <!-- Comillas decorativas de fondo -->
                     <span class="absolute -right-2 -bottom-6 text-9xl text-cafecito-accent/10 font-serif select-none pointer-events-none group-hover:scale-110 transition-transform duration-500">“</span>
                     
@@ -138,6 +138,12 @@ function renderDots() {
 window.addEventListener('resize', () => {
     const oldItemsPerView = itemsPerView;
     itemsPerView = getItemsPerView();
+    
+    // Limitar el índice actual antes de renderizar los dots y mover el slider
+    const maxIndex = customers.length - itemsPerView;
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    if (currentIndex < 0) currentIndex = 0;
+
     if (oldItemsPerView !== itemsPerView) {
         renderDots();
     }
@@ -150,8 +156,8 @@ function updateSlider() {
     if (currentIndex > maxIndex) currentIndex = maxIndex;
     if (currentIndex < 0) currentIndex = 0;
 
-    // Calcula el porcentaje a desplazar
-    const percentage = -(currentIndex * (100 / itemsPerView));
+    // Calcula el porcentaje a desplazar en base al ancho total del contenedor (customers.length)
+    const percentage = -(currentIndex * (100 / customers.length));
     customersContainer.style.transform = `translateX(${percentage}%)`;
 
     // Actualizar dots
